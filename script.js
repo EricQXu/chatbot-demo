@@ -1,9 +1,11 @@
+// import API_KEY from "./api_key.js";
+
 const messageBar = document.querySelector(".bar-wrapper input");
 const sendBtn = document.querySelector(".bar-wrapper button");
 const messageBox = document.querySelector(".message-box");
 
 let API_URL = "https://api.openai.com/v1/chat/completions";
-let API_KEY = process.env.API_KEY;
+// let API_KEY = //insert key here;
 
 // Define the sendMessage function
 function sendMessage() {
