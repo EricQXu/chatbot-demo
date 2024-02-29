@@ -1,3 +1,3 @@
-const API_KEY = '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';
+const API_KEY = 'censored';
 
 export default API_KEY;
