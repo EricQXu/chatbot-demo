@@ -1,3 +1,4 @@
+import botMessage from "./server.js";
 document.getElementById('send-btn').addEventListener('click', async () => {
   const userInput = document.getElementById('user-input');
   const message = userInput.value;
@@ -28,6 +29,15 @@ document.getElementById('send-btn').addEventListener('click', async () => {
 function updateChatArea(sender, message) {
   const chatArea = document.getElementById('chat-area');
   const messageElement = document.createElement('div');
+  
+  // if (sender === 'You') {
+  //   messageElement.classList.add(message);
+  // } else {
+  //   messageElement.classList.add(botMessage);
+  // }
+
   messageElement.textContent = `${sender}: ${message}`;
   chatArea.appendChild(messageElement);
+  message2Element.textContent = `"Bot": ${botMessage}`;
+  chatArea.appendChild(messageElement2);
 }
