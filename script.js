@@ -20,7 +20,7 @@ document.getElementById('send-btn').addEventListener('click', async () => {
     }
 
     const data = await response.json();
-    updateChatArea('Bot', data.botMessage); // Update chat area with ChatGPT response
+    updateChatArea('Bot', data.botessage); // Update chat area with ChatGPT response
   } catch (error) {
     console.error('Error:', error);
   }
@@ -30,14 +30,12 @@ function updateChatArea(sender, message) {
   const chatArea = document.getElementById('chat-area');
   const messageElement = document.createElement('div');
   
-  // if (sender === 'You') {
-  //   messageElement.classList.add(message);
-  // } else {
-  //   messageElement.classList.add(botMessage);
-  // }
+  if (sender === 'You') {
+    messageElement.classList.add(message);
+  } else {
+    messageElement.classList.add(botMessage);
+  }
 
   messageElement.textContent = `${sender}: ${message}`;
   chatArea.appendChild(messageElement);
-  message2Element.textContent = `"Bot": ${botMessage}`;
-  chatArea.appendChild(messageElement2);
 }
