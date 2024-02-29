@@ -19,7 +19,7 @@ document.getElementById('send-btn').addEventListener('click', async () => {
     }
 
     const data = await response.json();
-    updateChatArea('Bot', data.message); // Update chat area with ChatGPT response
+    updateChatArea('Bot', data.botMessage); // Update chat area with ChatGPT response
   } catch (error) {
     console.error('Error:', error);
   }
